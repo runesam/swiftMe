@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CFE19123054666AABDBB7C8 /* Pods_quizzler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C1C48763850A0B7D40D44D4 /* Pods_quizzler.framework */; };
 		875279812201613100ACDDBB /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875279802201613100ACDDBB /* Question.swift */; };
 		87527983220168C100ACDDBB /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87527982220168C100ACDDBB /* QuestionBank.swift */; };
 		87D0E09321FAEAB000AE1A11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D0E09221FAEAB000AE1A11 /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C1C48763850A0B7D40D44D4 /* Pods_quizzler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quizzler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		875279802201613100ACDDBB /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		87527982220168C100ACDDBB /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		87D0E08F21FAEAB000AE1A11 /* quizzler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzler.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,6 +28,8 @@
 		87D0E09921FAEAB200AE1A11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87D0E09C21FAEAB200AE1A11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87D0E09E21FAEAB200AE1A11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DE36BDE009E13760B84EDFB /* Pods-quizzler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzler.release.xcconfig"; path = "Pods/Target Support Files/Pods-quizzler/Pods-quizzler.release.xcconfig"; sourceTree = "<group>"; };
+		CEA6EFAF3E272F09A0E14A2D /* Pods-quizzler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quizzler/Pods-quizzler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,12 +37,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CFE19123054666AABDBB7C8 /* Pods_quizzler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6401F6865DA0E6D9AA39F335 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEA6EFAF3E272F09A0E14A2D /* Pods-quizzler.debug.xcconfig */,
+				9DE36BDE009E13760B84EDFB /* Pods-quizzler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8752797C2201604500ACDDBB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +94,8 @@
 			children = (
 				87D0E09121FAEAB000AE1A11 /* quizzler */,
 				87D0E09021FAEAB000AE1A11 /* Products */,
+				6401F6865DA0E6D9AA39F335 /* Pods */,
+				F89625CFDE0A450EB2E9B3D9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +118,14 @@
 			path = quizzler;
 			sourceTree = "<group>";
 		};
+		F89625CFDE0A450EB2E9B3D9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C1C48763850A0B7D40D44D4 /* Pods_quizzler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,9 +133,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87D0E0A121FAEAB200AE1A11 /* Build configuration list for PBXNativeTarget "quizzler" */;
 			buildPhases = (
+				AC950AE7F208544860576E3A /* [CP] Check Pods Manifest.lock */,
 				87D0E08B21FAEAB000AE1A11 /* Sources */,
 				87D0E08C21FAEAB000AE1A11 /* Frameworks */,
 				87D0E08D21FAEAB000AE1A11 /* Resources */,
+				447AD362840DCE0D77170E8F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -167,6 +193,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		447AD362840DCE0D77170E8F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-quizzler/Pods-quizzler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JGProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quizzler/Pods-quizzler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC950AE7F208544860576E3A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-quizzler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		87D0E08B21FAEAB000AE1A11 /* Sources */ = {
@@ -320,11 +393,13 @@
 		};
 		87D0E0A221FAEAB200AE1A11 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA6EFAF3E272F09A0E14A2D /* Pods-quizzler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2ER62R6BP;
 				INFOPLIST_FILE = "$(SRCROOT)/quizzler/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,11 +413,13 @@
 		};
 		87D0E0A321FAEAB200AE1A11 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE36BDE009E13760B84EDFB /* Pods-quizzler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F2ER62R6BP;
 				INFOPLIST_FILE = "$(SRCROOT)/quizzler/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

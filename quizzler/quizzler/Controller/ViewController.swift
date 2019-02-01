@@ -6,7 +6,9 @@
 //  Copyright © 2019 bta3 computer. All rights reserved.
 //
 
-import UIKit
+import JGProgressHUD;
+
+import UIKit;
 
 class ViewController: UIViewController {
     let questions = QuestionBank();
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
     
     @IBAction func answerPressed(_ sender: UIButton) {
         checkAnswer(sender.tag == 1);
-        nextAnswer();
+        nextQuestion();
         updateUI();
     }
     
@@ -40,9 +42,18 @@ class ViewController: UIViewController {
     }
     
     func checkAnswer(_ pickedAnswer: Bool) {
+        let hud = JGProgressHUD(style: .dark);
+        hud.show(in: self.view);
+        hud.dismiss(afterDelay: 0.5);
+        
         if (pickedAnswer == questions.list[questionIndex].answer) {
+            hud.indicatorView = JGProgressHUDSuccessIndicatorView();
+            hud.textLabel.text = "Correct";
             return score += 1;
         }
+        
+        hud.indicatorView = JGProgressHUDErrorIndicatorView();
+        hud.textLabel.text = "Wrong!";
     }
     
     func updateUI() {
@@ -53,7 +64,7 @@ class ViewController: UIViewController {
         progressBar.frame.size.width = CGFloat(widthValue);
     }
     
-    func nextAnswer() {
+    func nextQuestion() {
         if (questionIndex == questions.list.count - 1) {
             onQuestionsDone();
         } else {
